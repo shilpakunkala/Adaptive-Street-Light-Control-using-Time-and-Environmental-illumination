@@ -60,14 +60,14 @@ require separate external GPIO connections.
 
 **6.Working Principle**
 
-1. The RTC provides the current date and time.
-2. The LDR sensor detects surrounding light intensity.
-3. The ADC converts the analog sensor output into a digital value.
-4. An external interrupt is used to enter the configuration menu, allowing the user to modify streetlight timings and RTC settings..
-5. The microcontroller processes the sensor readings and time information.
-6. Based on the programmed conditions, the street light is switched ON or OFF.
-7. The LCD displays the current time, date, LDR readings, and street light status.
-8. The keypad allows the user to navigate the menu and edit RTC and device settings.
+1. The RTC maintains the current date and time.
+2. The LDR sensor detects the surrounding environmental light intensity.
+3. The ADC converts the analog LDR sensor output into a digital value.
+4. An external interrupt (EINT0) is used to enter the configuration menu.
+5. The user can modify RTC settings and streetlight ON/OFF timings using the keypad.
+6. The microcontroller compares the current RTC time with the configured operating schedule.
+7. Based on the operating schedule and LDR threshold, the streetlight is automatically switched ON or OFF.
+8. The LCD displays the current time, date, illumination readings, and streetlight status.
 
 **7.Features**
 
@@ -84,16 +84,22 @@ require separate external GPIO connections.
 
 | File | Description |
 |---|---|
-| main.c | Main application |
-| adc.c / adc.h | ADC configuration and reading |
-| ldr.c / ldr.h | LDR sensor interfacing |
-| lcd.c / lcd.h | LCD interfacing |
-| kpm.c / kpm.h | Keypad interfacing |
-| rtc.c / rtc.h | RTC operations |
-| menu.c / menu.h | Menu handling |
-| switching.c / switching.h | Street light switching |
-| interrupt.c / interrupt.h | External interrupt handling |
-| delay.c / delay.h | Delay functions |
+| `main.c` | Main application |
+| `adc.c` / `adc.h` | ADC configuration and reading |
+| `adc_defines.h` | ADC-related macro definitions |
+| `ldr.c` / `ldr.h` | LDR sensor interfacing |
+| `ldr_lcd.c` / `ldr_lcd.h` | Displaying LDR sensor readings and illumination status on the LCD |
+| `lcd.c` / `lcd.h` | LCD interfacing |
+| `lcd_defines.h` | LCD-related macro definitions |
+| `kpm.c` / `kpm.h` | Keypad interfacing |
+| `kpm_defines.h` | Keypad-related macro definitions |
+| `rtc.c` / `rtc.h` | RTC operations |
+| `menu.c` / `menu.h` | Menu handling |
+| `switching.c` / `switching.h` | Streetlight switching |
+| `interrupt.c` / `interrupt.h` | External interrupt handling |
+| `delay.c` / `delay.h` | Delay functions |
+| `defines.h` | Common macro definitions |
+| `types.h` | User-defined data type definitions |
 
 **9.How to Run**
 
