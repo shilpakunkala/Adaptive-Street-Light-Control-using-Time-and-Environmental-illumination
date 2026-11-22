@@ -80,21 +80,36 @@ The Adaptive Street Light Control System is an embedded systems project develope
 7. Load the HEX file into the hardware or Proteus simulation.
 8. Run the project and observe the LCD output.
 
-**9.Applications**
+**9. Project Diagrams and Hardware Outputs**
+
+1. System Block Diagram
+![Block Diagram](images/block_diagram.png)
+ 2. Proteus Simulation
+![Proteus Simulation](images/proteus.png)
+ 3. RTC Display
+![RTC Display](images/rtc_display.jpg)
+4. External Interrupt Output
+![External Interrupt](images/external_interrupt.jpg)
+ 5. Streetlight ON Condition
+![Streetlight ON](images/Streetlight_on.jpg)
+ 6. Streetlight OFF Condition
+![Streetlight OFF](images/Streetlight_off.jpg)
+
+**10.Applications**
 
 - Smart city street lighting.
 - Highway lighting systems.
 - Campus lighting automation.
 - Parking area lighting.
 
-**10.Future Enhancements**
+**11.Future Enhancements**
 
 - IoT-based remote monitoring.
 - Wireless street light control.
 - Energy consumption monitoring.
 - Fault detection and reporting.
 
-**11.Conclusion**
+**12.Conclusion**
 
 This project demonstrates the practical implementation of an embedded system using the LPC2148 ARM7 microcontroller. By integrating RTC, ADC, LDR, LCD, keypad, and external interrupt modules, the system provides an automated approach to street light management and helps reduce unnecessary energy consumption.
 
