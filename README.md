@@ -115,7 +115,7 @@ require separate external GPIO connections.
 **10. Project Diagrams and Hardware Outputs**
 
 1. System Block Diagram
-![Adaptive Street Light Control Block Diagram](block-diagram.png)
+![Adaptive Street Light Control Block Diagram](block_diagram.png)
  2. Proteus Simulation
 ![Proteus Simulation](images/proteus.png)
  3. RTC Display
